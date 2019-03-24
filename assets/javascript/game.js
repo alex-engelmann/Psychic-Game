@@ -23,7 +23,6 @@ document.onkeyup = function (event) {
         currentGuesses = "";
     }
     else if (guessesLeft === 1){
-        currentGuesses += userGuess + ",";
         guessesLeft = 5;
         losses++;
         currentGuesses = "";
@@ -32,6 +31,20 @@ document.onkeyup = function (event) {
         guessesLeft--;
         currentGuesses += userGuess + ",";
     }
+    var element = document.getElementById("wins");
+    element.innerHTML = "Wins: " + wins;
+
+    var element = document.getElementById("losses");
+    element.innerHTML = "Losses: " + losses;
+
+    var element = document.getElementById("guesses-left");
+    element.innerHTML = "Guesses left: " + guessesLeft;
+
+    var element = document.getElementById("guesses-current");
+    element.innerHTML = "Your Guesses So Far: " + currentGuesses;
+
+
+
     console.log("CPU letter: " + randomLetter);
     console.log("Wins: " + wins);
     console.log("Losses: " + losses);
