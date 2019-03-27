@@ -17,20 +17,23 @@ document.onkeyup = function (event) {
     var userGuess = event.key.toLowerCase();
 
     if (userGuess === randomLetter) {
-        currentGuesses += userGuess + ",";
         wins++;
         guessesLeft = 5;
         currentGuesses = "";
+        alert("you win!");
     }
     else if (guessesLeft === 1){
-        guessesLeft = 5;
         losses++;
+        alert("you lose!");
         currentGuesses = "";
+        guessesLeft = 5;
     }
     else {
         guessesLeft--;
         currentGuesses += userGuess + ",";
     }
+
+    //Update all the HTML parts to show the user
     var element = document.getElementById("wins");
     element.innerHTML = "Wins: " + wins;
 
@@ -44,7 +47,7 @@ document.onkeyup = function (event) {
     element.innerHTML = "Your Guesses So Far: " + currentGuesses;
 
 
-
+    //This is just for debugging purposes, will comment out later
     console.log("CPU letter: " + randomLetter);
     console.log("Wins: " + wins);
     console.log("Losses: " + losses);
