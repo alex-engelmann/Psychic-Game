@@ -30,7 +30,7 @@ document.onkeyup = function (event) {
     }
     else {
         guessesLeft--;
-        currentGuesses += userGuess + ",";
+        currentGuesses += userGuess + " ";
     }
 
     //Update all the HTML parts to show the user
