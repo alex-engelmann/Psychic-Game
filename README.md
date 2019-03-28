@@ -1,3 +1,3 @@
 # Psychic-Game
 
-Will fill this in once the game is functional
+A simple letter guessing game that accepts keyboard input.  You have 10 tries to get the letter right.

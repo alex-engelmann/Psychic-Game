@@ -2,7 +2,8 @@
 
 var wins = 0;
 var losses = 0;
-var guessesLeft = 5;
+var guessesLeft = 10;
+const defaultGuessesLeft = 10; //allows for more flexible design in the future
 var currentGuesses = "";
 
 //Write an algorithm that generates a random letter
@@ -18,7 +19,7 @@ document.onkeyup = function (event) {
 
     if (userGuess === randomLetter) {
         wins++;
-        guessesLeft = 5;
+        guessesLeft = defaultGuessesLeft;
         currentGuesses = "";
         alert("you win!");
     }
@@ -26,7 +27,7 @@ document.onkeyup = function (event) {
         losses++;
         alert("you lose!");
         currentGuesses = "";
-        guessesLeft = 5;
+        guessesLeft = defaultGuessesLeft;
     }
     else {
         guessesLeft--;
@@ -48,9 +49,9 @@ document.onkeyup = function (event) {
 
 
     //This is just for debugging purposes, will comment out later
-    console.log("CPU letter: " + randomLetter);
-    console.log("Wins: " + wins);
-    console.log("Losses: " + losses);
-    console.log("Guesses Left: " + guessesLeft);
-    console.log("Guesses so far: " + currentGuesses);
+    // console.log("CPU letter: " + randomLetter);
+    // console.log("Wins: " + wins);
+    // console.log("Losses: " + losses);
+    // console.log("Guesses Left: " + guessesLeft);
+    // console.log("Guesses so far: " + currentGuesses);
 }
