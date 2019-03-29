@@ -3,13 +3,13 @@
 var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
-const defaultGuessesLeft = 10; //allows for more flexible design in the future
+var defaultGuessesLeft = 10; //allows for more flexible design in the future
 var currentGuesses = "";
 
 //Write an algorithm that generates a random letter
 
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
-var randomLetter = alphabet[Math.floor(Math.random() * (alphabet.length -1))];
+var randomLetter = alphabet[Math.floor(Math.random() * (alphabet.length - 1))];
 
 //Compare the user's input to the random letter
 //and update variables accordingly
@@ -23,7 +23,7 @@ document.onkeyup = function (event) {
         currentGuesses = "";
         alert("you win!");
     }
-    else if (guessesLeft === 1){
+    else if (guessesLeft === 1) {
         losses++;
         alert("you lose!");
         currentGuesses = "";
