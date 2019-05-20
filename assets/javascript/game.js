@@ -6,6 +6,8 @@ var guessesLeft = 10;
 var defaultGuessesLeft = 10; //allows for more flexible design in the future
 var currentGuesses = "";
 
+
+
 //Write an algorithm that generates a random letter
 
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -46,7 +48,15 @@ document.onkeyup = function (event) {
 
     var element = document.getElementById("guesses-current");
     element.innerHTML = "Your Guesses So Far: " + currentGuesses;
+    var value = 33;
 
+    function myFunction() {
+        value = 66;
+    }
+
+    myFunction();
+
+    console.log(value);
 
     //This is just for debugging purposes, will comment out later
     // console.log("CPU letter: " + randomLetter);
